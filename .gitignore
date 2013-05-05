@@ -133,6 +133,13 @@ Desktop.ini
 
 *.py[co]
 
+#############
+## Java
+#############
+
+*.class
+*.jar
+
 # Packages
 *.egg
 *.egg-info
