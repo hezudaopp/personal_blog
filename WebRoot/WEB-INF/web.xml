@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee   http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+ <filter>
+  <filter-name>ForceNoCacheFilter</filter-name>
+  <filter-class>filter.ForceNoCacheFilter</filter-class>
+ </filter>
+ <filter>
+  <filter-name>CharacterEncodingFilter</filter-name>
+  <filter-class>filter.CharacterEncodingFilter</filter-class>
+  <init-param>
+   <param-name>encode</param-name>
+   <param-value>utf-8</param-value>
+  </init-param>
+ </filter>
+ <!--<filter>
+  <filter-name>CheckLoginFilter</filter-name>
+  <filter-class>filter.CheckLoginFilter</filter-class>
+  <init-param>
+   <param-name>redirectURL</param-name>
+   <param-value>/error.jsp</param-value>
+  </init-param>
+  <init-param>
+   <param-name>sessionKey</param-name>
+   <param-value>user</param-value>
+  </init-param>
+  <init-param>
+   <param-name>checkURLList</param-name>
+   <param-value/>
+  </init-param>
+ </filter>
+ <filter>
+  <filter-name>RightFilter</filter-name>
+  <filter-class>filter.RightFilter</filter-class>
+ </filter>
+ --><filter-mapping>
+  <filter-name>ForceNoCacheFilter</filter-name>
+  <servlet-name>BlogList</servlet-name>
+ </filter-mapping>
+ <filter-mapping>
+  <filter-name>ForceNoCacheFilter</filter-name>
+  <servlet-name>CommentListByBlog</servlet-name>
+ </filter-mapping>
+ <filter-mapping>
+  <filter-name>CharacterEncodingFilter</filter-name>
+  <url-pattern>/*</url-pattern>
+ </filter-mapping>
+ <!--<filter-mapping>
+  <filter-name>CheckLoginFilter</filter-name>
+  <url-pattern>/admin/*</url-pattern>
+ </filter-mapping>
+ <filter-mapping>
+  <filter-name>RightFilter</filter-name>
+  <url-pattern>/admin/*</url-pattern>
+ </filter-mapping>
+ <filter-mapping>
+  <filter-name>RightFilter</filter-name>
+  <url-pattern>/manage/*</url-pattern>
+ </filter-mapping>
+ --><servlet>
+  <description>This is the description of my J2EE component</description>
+  <display-name>This is the display name of my J2EE component</display-name>
+  <servlet-name>UserRegister</servlet-name>
+  <servlet-class>servlet.UserRegister</servlet-class>
+ </servlet>
+ <servlet>
+  <description>This is the description of my J2EE component</description>
+  <display-name>This is the display name of my J2EE component</display-name>
+  <servlet-name>UserLogin</servlet-name>
+  <servlet-class>servlet.UserLogin</servlet-class>
+ </servlet>
+ <servlet>
+  <description>This is the description of my J2EE component</description>
+  <display-name>This is the display name of my J2EE component</display-name>
+  <servlet-name>CheckName</servlet-name>
+  <servlet-class>servlet.CheckName</servlet-class>
+ </servlet>
+ <servlet>
+  <description>This is the description of my J2EE component</description>
+  <display-name>This is the display name of my J2EE component</display-name>
+  <servlet-name>UserLogout</servlet-name>
+  <servlet-class>servlet.UserLogout</servlet-class>
+ </servlet>
+ <servlet>
+  <description>This is the description of my J2EE component</description>
+  <display-name>This is the display name of my J2EE component</display-name>
+  <servlet-name>BlogList</servlet-name>
+  <servlet-class>servlet.BlogList</servlet-class>
+ </servlet>
+ <servlet>
+  <description>This is the description of my J2EE component</description>
+  <display-name>This is the display name of my J2EE component</display-name>
+  <servlet-name>BlogTitleList</servlet-name>
+  <servlet-class>servlet.BlogTitleList</servlet-class>
+ </servlet>
+ <servlet>
+  <description>This is the description of my J2EE component</description>
+  <display-name>This is the display name of my J2EE component</display-name>
+  <servlet-name>BlogShow</servlet-name>
+  <servlet-class>servlet.BlogShow</servlet-class>
+ </servlet>
+ <servlet>
+  <description>This is the description of my J2EE component</description>
+  <display-name>This is the display name of my J2EE component</display-name>
+  <servlet-name>BlogEdit</servlet-name>
+  <servlet-class>servlet.BlogEdit</servlet-class>
+ </servlet>
+ <servlet>
+  <description>This is the description of my J2EE component</description>
+  <display-name>This is the display name of my J2EE component</display-name>
+  <servlet-name>BlogDelete</servlet-name>
+  <servlet-class>servlet.BlogDelete</servlet-class>
+ </servlet>
+ <servlet>
+  <description>This is the description of my J2EE component</description>
+  <display-name>This is the display name of my J2EE component</display-name>
+  <servlet-name>BlogUpdate</servlet-name>
+  <servlet-class>servlet.BlogUpdate</servlet-class>
+ </servlet>
+ <servlet>
+  <description>This is the description of my J2EE component</description>
+  <display-name>This is the display name of my J2EE component</display-name>
+  <servlet-name>BlogAdd</servlet-name>
+  <servlet-class>servlet.BlogAdd</servlet-class>
+ </servlet>
+ <servlet>
+  <description>This is the description of my J2EE component</description>
+  <display-name>This is the display name of my J2EE component</display-name>
+  <servlet-name>BlogInsert</servlet-name>
+  <servlet-class>servlet.BlogInsert</servlet-class>
+ </servlet>
+ <servlet>
+  <description>This is the description of my J2EE component</description>
+  <display-name>This is the display name of my J2EE component</display-name>
+  <servlet-name>UserList</servlet-name>
+  <servlet-class>servlet.UserList</servlet-class>
+ </servlet>
+ <servlet>
+  <description>This is the description of my J2EE component</description>
+  <display-name>This is the display name of my J2EE component</display-name>
+  <servlet-name>CommentList</servlet-name>
+  <servlet-class>servlet.CommentList</servlet-class>
+ </servlet>
+ <servlet>
+  <description>This is the description of my J2EE component</description>
+  <display-name>This is the display name of my J2EE component</display-name>
+  <servlet-name>UserDelete</servlet-name>
+  <servlet-class>servlet.UserDelete</servlet-class>
+ </servlet>
+ <servlet>
+  <description>This is the description of my J2EE component</description>
+  <display-name>This is the display name of my J2EE component</display-name>
+  <servlet-name>UserUpdate</servlet-name>
+  <servlet-class>servlet.UserUpdate</servlet-class>
+ </servlet>
+ <servlet>
+  <description>This is the description of my J2EE component</description>
+  <display-name>This is the display name of my J2EE component</display-name>
+  <servlet-name>UserEdit</servlet-name>
+  <servlet-class>servlet.UserEdit</servlet-class>
+ </servlet>
+ <servlet>
+  <description>This is the description of my J2EE component</description>
+  <display-name>This is the display name of my J2EE component</display-name>
+  <servlet-name>UserAdd</servlet-name>
+  <servlet-class>servlet.UserAdd</servlet-class>
+ </servlet>
+ <servlet>
+  <description>This is the description of my J2EE component</description>
+  <display-name>This is the display name of my J2EE component</display-name>
+  <servlet-name>CommentInsert</servlet-name>
+  <servlet-class>servlet.CommentInsert</servlet-class>
+ </servlet>
+ <servlet>
+  <description>This is the description of my J2EE component</description>
+  <display-name>This is the display name of my J2EE component</display-name>
+  <servlet-name>CommentDelete</servlet-name>
+  <servlet-class>servlet.CommentDelete</servlet-class>
+ </servlet>
+ <servlet>
+  <description>This is the description of my J2EE component</description>
+  <display-name>This is the display name of my J2EE component</display-name>
+  <servlet-name>Page</servlet-name>
+  <servlet-class>servlet.Page</servlet-class>
+ </servlet>
+ <servlet>
+  <description>This is the description of my J2EE component</description>
+  <display-name>This is the display name of my J2EE component</display-name>
+  <servlet-name>CommentListByBlog</servlet-name>
+  <servlet-class>servlet.CommentListByBlog</servlet-class>
+ </servlet>
+ <servlet>
+  <description>This is the description of my J2EE component</description>
+  <display-name>This is the display name of my J2EE component</display-name>
+  <servlet-name>BlogSearch</servlet-name>
+  <servlet-class>servlet.BlogSearch</servlet-class>
+ </servlet>
+ <servlet>
+  <description>FCKeditor.Java Sample Web Application</description>
+  <display-name>FCKeditor.Java Sample Web Application</display-name>
+  <servlet-name>ConnectorServlet</servlet-name>
+  <servlet-class>net.fckeditor.connector.ConnectorServlet</servlet-class>
+  <load-on-startup>1</load-on-startup>
+ </servlet>
+ <servlet>
+  <description>This is the description of my J2EE component</description>
+  <display-name>This is the display name of my J2EE component</display-name>
+  <servlet-name>Init</servlet-name>
+  <servlet-class>servlet.Init</servlet-class>
+  <init-param>
+   <param-name>param-name</param-name>
+   <param-value>param-value</param-value>
+  </init-param>
+ </servlet>
+ <servlet-mapping>
+  <servlet-name>UserRegister</servlet-name>
+  <url-pattern>/UserRegister</url-pattern>
+ </servlet-mapping>
+ <servlet-mapping>
+  <servlet-name>UserLogin</servlet-name>
+  <url-pattern>/UserLogin</url-pattern>
+ </servlet-mapping>
+ <servlet-mapping>
+  <servlet-name>CheckName</servlet-name>
+  <url-pattern>/CheckName</url-pattern>
+ </servlet-mapping>
+ <servlet-mapping>
+  <servlet-name>UserLogout</servlet-name>
+  <url-pattern>/UserLogout</url-pattern>
+ </servlet-mapping>
+ <servlet-mapping>
+  <servlet-name>BlogList</servlet-name>
+  <url-pattern>/BlogList</url-pattern>
+ </servlet-mapping>
+ <servlet-mapping>
+  <servlet-name>BlogTitleList</servlet-name>
+  <url-pattern>/BlogTitleList</url-pattern>
+ </servlet-mapping>
+ <servlet-mapping>
+  <servlet-name>BlogShow</servlet-name>
+  <url-pattern>/BlogShow</url-pattern>
+ </servlet-mapping>
+ <servlet-mapping>
+  <servlet-name>BlogEdit</servlet-name>
+  <url-pattern>/BlogEdit</url-pattern>
+ </servlet-mapping>
+ <servlet-mapping>
+  <servlet-name>BlogDelete</servlet-name>
+  <url-pattern>/BlogDelete</url-pattern>
+ </servlet-mapping>
+ <servlet-mapping>
+  <servlet-name>BlogUpdate</servlet-name>
+  <url-pattern>/BlogUpdate</url-pattern>
+ </servlet-mapping>
+ <servlet-mapping>
+  <servlet-name>BlogAdd</servlet-name>
+  <url-pattern>/BlogAdd</url-pattern>
+ </servlet-mapping>
+ <servlet-mapping>
+  <servlet-name>BlogInsert</servlet-name>
+  <url-pattern>/BlogInsert</url-pattern>
+ </servlet-mapping>
+ <servlet-mapping>
+  <servlet-name>UserList</servlet-name>
+  <url-pattern>/UserList</url-pattern>
+ </servlet-mapping>
+ <servlet-mapping>
+  <servlet-name>CommentList</servlet-name>
+  <url-pattern>/CommentList</url-pattern>
+ </servlet-mapping>
+ <servlet-mapping>
+  <servlet-name>UserDelete</servlet-name>
+  <url-pattern>/UserDelete</url-pattern>
+ </servlet-mapping>
+ <servlet-mapping>
+  <servlet-name>UserUpdate</servlet-name>
+  <url-pattern>/UserUpdate</url-pattern>
+ </servlet-mapping>
+ <servlet-mapping>
+  <servlet-name>UserAdd</servlet-name>
+  <url-pattern>/UserAdd</url-pattern>
+ </servlet-mapping>
+ <servlet-mapping>
+  <servlet-name>UserEdit</servlet-name>
+  <url-pattern>/UserEdit</url-pattern>
+ </servlet-mapping>
+ <servlet-mapping>
+  <servlet-name>CommentInsert</servlet-name>
+  <url-pattern>/CommentInsert</url-pattern>
+ </servlet-mapping>
+ <servlet-mapping>
+  <servlet-name>CommentDelete</servlet-name>
+  <url-pattern>/CommentDelete</url-pattern>
+ </servlet-mapping>
+ <servlet-mapping>
+  <servlet-name>Page</servlet-name>
+  <url-pattern>/Page</url-pattern>
+ </servlet-mapping>
+ <servlet-mapping>
+  <servlet-name>CommentListByBlog</servlet-name>
+  <url-pattern>/CommentListByBlog</url-pattern>
+ </servlet-mapping>
+ <servlet-mapping>
+  <servlet-name>BlogSearch</servlet-name>
+  <url-pattern>/BlogSearch</url-pattern>
+ </servlet-mapping>
+ <servlet-mapping>
+  <servlet-name>ConnectorServlet</servlet-name>
+  <url-pattern>/fckeditor/editor/filemanager/connectors/*</url-pattern>
+ </servlet-mapping>
+ <servlet-mapping>
+  <servlet-name>Init</servlet-name>
+  <url-pattern>/Init</url-pattern>
+ </servlet-mapping>
+ <welcome-file-list>
+  <welcome-file>index.jsp</welcome-file>
+ </welcome-file-list>
+ <login-config>
+  <auth-method>BASIC</auth-method>
+ </login-config>
+</web-app>

@@ -1,0 +1,72 @@
+#comment{
+	background: #fff;
+    margin: 0 auto 2em auto;
+    overflow: hidden;
+	
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+
+#comment h2 {
+    color: #C74350;
+    font-size: 1.429em;
+    margin-bottom: .25em;
+    padding: 0px 30px;
+}
+
+#comment a:link, #comment a:visited {
+    color: #C74350;
+    display: block;
+    border-bottom: 0px solid #F4E3E3;
+    text-decoration: none;
+	text-shadow:none;
+    padding: .3em .25em;
+}
+
+#comment #commentList a:hover, a:active {
+    background-color: #C74350;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 5px 2px 6px #000; /*设置或检索对象中文本的文字有阴影及模糊效果, 5px->right 2px->down 6px->blur #000->shadow color*/
+}
+
+#comment ul{
+	list-style: none;
+}
+
+#comment ul li{
+	padding: 20px 0;
+}
+
+#comment #commentlist{
+	margin-right: 20px; 
+    display: block;
+    border-bottom: 0px solid #F4E3E3;
+    text-decoration: none;
+	text-shadow:none;
+    padding: .3em .25em;
+}
+
+#comment .page_count{
+	float: left; 
+	height: 100%; 
+	margin: 0 2px;
+	padding: 2px;
+}
+
+#comment .page_count a:link, #comment a:visited{
+	color: #C74350;
+    display: block;
+    border-bottom: 0px solid #F4E3E3;
+    text-decoration: none;
+	text-shadow:none;
+	padding: 0em;
+}
+
+#comment .page_count a:hover, a:active {
+    background-color: #C74350;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 5px 2px 6px #000; /*设置或检索对象中文本的文字有阴影及模糊效果, 5px->right 2px->down 6px->blur #000->shadow color*/
+}

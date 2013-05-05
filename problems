@@ -1,0 +1,26 @@
+1.用户是否具有博客信息更改的权利判断方法：
+	判断用户必须登录？ 是『
+		再判断用户是否是管理员？
+			是-》可以更改
+			否-》判断该博客是否属于该用户
+				是-》可以更改
+				否-》不可以
+	』否-》不可以
+	
+2.用户直接在地址栏输入要显示或编辑或删除博客的id
+	如果博客id不存在，需要做处理
+3.注意redirect和forward的使用场合。
+	如添加博客后显示博客列表就应该用redirect，如果这时用forward，用户刷新是就可能重复插入数据；
+	如果两个请求之间有request参数传递，最好用forward
+4.sessionID可以通过参数传到服务器端，重启浏览器后可以通过传递sessionID（保存在客户端的cookie中）参数来重启之前状态
+5.cookie可以分为两种，session cookie和长久cookie
+6.<init-param>
+	<param-name></param-name>
+	<param-value></param-value>
+</init-param>
+<load-on-startup>1</load-on-startup>	//启动装入优先级，每个servlet只会被加载一次
+7.servlet生命周期
+加载、实例化、init、service(doGet or doPost)、destroy;
+实例化和加载可以发生在引擎启动的时候，也可以推迟到容器需要该servlet为客户请求服务的时候。 
+其中init和destroy只在servlet第一次加载和销毁时（服务器关闭）被调用
+8.jsp被编译成的servlet代码（java和class文件）存放在tomcat的work目录下

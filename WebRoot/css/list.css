@@ -1,0 +1,6 @@
+.list li{
+	height: 21px;
+	line-height:21px;
+	overflow: hidden;
+	width: 100px;
+}

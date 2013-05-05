@@ -1,0 +1,27 @@
+/*
+ Body
+ *****************/
+#content {
+    background: #fff;
+    margin-bottom: 2em;
+    overflow:hidden;
+    padding: 20px 20px;
+    width: 760px;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+
+#content div{
+	margin-bottom: 40px;
+}
+
+#content div ul{
+	list-style: none;
+}
+
+#content div ul li{
+	border-bottom: 1px solid #eee;
+	float: left;
+	margin-right:10px; 
+}
